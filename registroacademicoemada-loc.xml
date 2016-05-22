@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 11" line=" 6" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 15" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 2" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 66" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 2" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 51" line=" 13" >
+      <vfs_project>P:\Projetos\Ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>P:\Projetos\Ada\RegistroAcademicoEmAda\disciplinas\Disciplina.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
