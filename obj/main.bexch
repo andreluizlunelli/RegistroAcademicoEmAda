@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr
+20160526000018
+[BOUND OBJECT FILES]
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\disciplina_crud.o
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\tolun\ada\RegistroAcademicoEmAda\obj\
+-LC:\Users\tolun\ada\RegistroAcademicoEmAda\obj\
+-LC:/gnat/x86-windows/adagpl-2015/gnatgpl/lib/gcc/i686-pc-mingw32/4.9.3/adalib/
+-static
+-static-libgcc
+C:/gnat/x86-windows/adagpl-2015/gnatgpl/lib/gcc/i686-pc-mingw32/4.9.3/adalib/libgnat.a
+-Wl,--stack=0x2000000
