@@ -18,6 +18,7 @@ package Disciplina_Crud is
    procedure Inserir(D : Disciplina);
    procedure Alterar(D : in out Disciplina);
    procedure Excluir(D : Disciplina);
+   procedure Imprimir_Console(D : Disciplina);
 
 private
    PK : Integer := 0;

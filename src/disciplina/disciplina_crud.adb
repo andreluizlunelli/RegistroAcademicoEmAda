@@ -1,4 +1,5 @@
 with Ada.Text_IO;
+with Ada.Text_IO.Unbounded_IO;
 
 package body Disciplina_Crud is
 --     procedure Add (V : Integer; To : in out Integer; Limited_To : Integer) is
@@ -20,6 +21,13 @@ package body Disciplina_Crud is
       D.Codigo := Retorna_Proximo_Codigo_Disciplina;
       return D;
    end Novo;
+
+   function Retorna_Proximo_Codigo_Disciplina return Integer is
+   begin
+      PK := PK + 1;
+      return PK;
+   end Retorna_Proximo_Codigo_Disciplina;
+
 
 --     function Obter(Codigo : Integer) return Disciplina is
 --     begin
@@ -48,10 +56,18 @@ package body Disciplina_Crud is
       null;
    end Excluir;
 
-   function Retorna_Proximo_Codigo_Disciplina return Integer is
+   procedure Imprimir_Console(D : Disciplina) is
    begin
-      PK := PK + 1;
-      return PK;
-   end Retorna_Proximo_Codigo_Disciplina;
+      Ada.Text_IO.Put("{Codigo=");
+      Ada.Text_IO.Put(Item => Integer'Image(D.Codigo));
+      Ada.Text_IO.Put(", Nome=");
+      Ada.Text_IO.Put(Item => Ada.Strings.Unbounded.To_String(D.Nome));
+      Ada.Text_IO.Put(", Carga_Horaria=");
+      Ada.Text_IO.Put(Item => Integer'Image(D.Carga_Horaria));
+      Ada.Text_IO.Put(", Valor=");
+      Ada.Text_IO.Put(Item => Float'Image(D.Valor));
+      Ada.Text_IO.Put_Line("}");
+   end Imprimir_Console;
+
 
 end Disciplina_Crud;
