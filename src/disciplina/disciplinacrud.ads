@@ -13,9 +13,9 @@ package DisciplinaCrud is
    -- metodos
    function Obter(Codigo : Integer) return Disciplina;
    function ObterLista return ArrayDisciplinas;
-   procedure Inserir(D : in Disciplina);
-   procedure Alterar(D : in out Disciplina);
-   procedure Excluir(D : Disciplina);
+   procedure Inserir(D : Disciplina);
+   procedure Alterar(D : Disciplina);
+   procedure Excluir(Codigo : Integer);
    procedure ImprimirConsole(D : Disciplina);
 
 private

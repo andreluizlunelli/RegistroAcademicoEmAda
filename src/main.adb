@@ -4,26 +4,30 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Strings.Unbounded;
 
 procedure Main is
-   D : Disciplina;
-   outraDisciplina : Disciplina;
-   barray : ArrayDisciplinas;
+   D, outra, excluido : Disciplina;
+
+   function str(s : String) return Ada.Strings.Unbounded.Unbounded_String is
+   begin
+      return Ada.Strings.Unbounded.To_Unbounded_String(s);
+   end str;
 begin
    D.Codigo := 1234;
-   D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("lala");
+   D.Nome := str("lala");
    D.CargaHoraria := 6;
    D.Valor := 150.99;
    Inserir(D);
 
-   D.Codigo := 1235;
-   D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("lolo");
-   D.CargaHoraria := 8;
-   D.Valor := 200.00;
-   Inserir(D);
-   barray := ObterLista;
-   for i in barray'Range loop
-      ImprimirConsole(barray(i));
-   end loop;
+   D.Nome := str("Linguagens de Programação");
+   Alterar(D);
 
+   outra := Obter(D.Codigo);
+   ImprimirConsole(outra);
+
+   Excluir(outra.Codigo);
+
+   excluido := Obter(outra.Codigo);
+   Put_Line("Imprimindo o excluido..");
+   ImprimirConsole(excluido);
 
 
 end Main;

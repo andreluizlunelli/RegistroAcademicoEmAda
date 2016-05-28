@@ -22,10 +22,9 @@ package body DisciplinaCrud is
       return aArrayDisciplinas;
    end ObterLista;
 
-   procedure Inserir(D : in Disciplina) is
+   procedure Inserir(D : Disciplina) is
    begin
       Ada.Text_IO.Put_Line("Inserindo a Disciplina..");
-      ImprimirConsole(D);
       aArrayDisciplinas(incrementoPosicao).Codigo := D.Codigo;
       aArrayDisciplinas(incrementoPosicao).Nome := D.Nome;
       aArrayDisciplinas(incrementoPosicao).CargaHoraria := D.CargaHoraria;
@@ -33,14 +32,31 @@ package body DisciplinaCrud is
       incrementoPosicao := incrementoPosicao + 1;
    end Inserir;
 
-   procedure Alterar(D : in out Disciplina) is
+   procedure Alterar(D : Disciplina) is
    begin
-      null;
+       Ada.Text_IO.Put_Line("Alterando a Disciplina..");
+       for i in aArrayDisciplinas'Range loop
+         if aArrayDisciplinas(i).Codigo = D.Codigo then
+            aArrayDisciplinas(i).Nome := D.Nome;
+            aArrayDisciplinas(i).CargaHoraria := D.CargaHoraria;
+            aArrayDisciplinas(i).Valor := D.Valor;
+            exit;
+         end if;
+      end loop;
    end Alterar;
 
-   procedure Excluir(D : Disciplina) is
+   procedure Excluir(Codigo : Integer) is
    begin
-      null;
+       Ada.Text_IO.Put_Line("Excluindo a Disciplina..");
+       for i in aArrayDisciplinas'Range loop
+         if aArrayDisciplinas(i).Codigo = Codigo then
+            aArrayDisciplinas(i).Codigo := 0;
+            aArrayDisciplinas(i).Nome := Ada.Strings.Unbounded.To_Unbounded_String("");
+            aArrayDisciplinas(i).CargaHoraria := 0;
+            aArrayDisciplinas(i).Valor := 0.0;
+            exit;
+         end if;
+      end loop;
    end Excluir;
 
    procedure ImprimirConsole(D : Disciplina) is
