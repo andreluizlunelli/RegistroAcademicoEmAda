@@ -1,34 +1,30 @@
-with Disciplina_Crud; use Disciplina_Crud;
+with DisciplinaCrud; use DisciplinaCrud;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Strings.Unbounded;
 
 procedure Main is
-   D : Disciplina_Crud.Disciplina;
-   D2 : Disciplina_Crud.Disciplina;
-   D3 : Disciplina_Crud.Disciplina;
-   D4 : Disciplina_Crud.Disciplina;
-
---     Crud : Disciplina_Crud;
+   D : Disciplina;
+   outraDisciplina : Disciplina;
+   barray : ArrayDisciplinas;
 begin
---     Incrementa(D);
---     Incrementa(D);
---     Put_Line(Item => Integer'Image(D.Codigo));
-
-   D := Disciplina_Crud.Novo;
+   D.Codigo := 1234;
    D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("lala");
-   D.Carga_Horaria := 6;
+   D.CargaHoraria := 6;
    D.Valor := 150.99;
-   Disciplina_Crud.Imprimir_Console(D);
+   Inserir(D);
+
+   D.Codigo := 1235;
+   D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("lolo");
+   D.CargaHoraria := 8;
+   D.Valor := 200.00;
+   Inserir(D);
+   barray := ObterLista;
+   for i in barray'Range loop
+      ImprimirConsole(barray(i));
+   end loop;
 
 
-   D2 := Disciplina_Crud.Novo;
-   Put_Line(Item => Integer'Image(D2.Codigo));
-
-   D3 := Disciplina_Crud.Novo;
-   Put_Line(Item => Integer'Image(D3.Codigo));
-
---     Disciplina_Crud.
 
 end Main;
 
