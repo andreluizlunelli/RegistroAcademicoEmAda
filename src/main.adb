@@ -16,7 +16,7 @@ begin
 --     Put_Line(Item => Integer'Image(D.Codigo));
 
    D := Disciplina_Crud.Novo;
-   D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("vai kh");
+   D.Nome := Ada.Strings.Unbounded.To_Unbounded_String("lala");
    D.Carga_Horaria := 6;
    D.Valor := 150.99;
    Disciplina_Crud.Imprimir_Console(D);
@@ -28,6 +28,7 @@ begin
    D3 := Disciplina_Crud.Novo;
    Put_Line(Item => Integer'Image(D3.Codigo));
 
+--     Disciplina_Crud.
 
 end Main;
 

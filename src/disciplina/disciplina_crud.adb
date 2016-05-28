@@ -29,11 +29,13 @@ package body Disciplina_Crud is
    end Retorna_Proximo_Codigo_Disciplina;
 
 
---     function Obter(Codigo : Integer) return Disciplina is
---     begin
---        --        return Array_Disciplinas(Codigo);
---        return null;
---     end Obter;
+   function Obter(Codigo : Integer) return Disciplina is
+      D : Disciplina;
+   begin
+
+      return Array_Disciplinas(Codigo);
+
+   end Obter;
 
 --     function Obter_Lista return Array_Disciplinas is
 --     begin
@@ -43,7 +45,7 @@ package body Disciplina_Crud is
 --
    procedure Inserir(D : Disciplina) is
    begin
-      null;
+      Array_Disciplinas(D.Codigo) := D;
    end Inserir;
 
    procedure Alterar(D : in out Disciplina) is
