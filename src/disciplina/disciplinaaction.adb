@@ -7,9 +7,8 @@ with Ada.Strings;
 with Ada.Text_IO.Unbounded_IO;
 with Ada.Strings.Unbounded;
 
-
-procedure MainDisciplina is
-   procedure MenuCadastrar is
+package body DisciplinaAction is
+   procedure Cadastrar is
       flagAdd : Integer := 1;
       D : Disciplina;
       Codigo : Integer := 0;
@@ -20,11 +19,6 @@ procedure MainDisciplina is
       loop
          Put("Digite o codigo da disciplina:        ");
          Get(D.Codigo);
-
-         --        Ada.Text_IO.Put("Enter a string: ");
-         --        D.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
-         --        Ada.Text_IO.Put_Line(Ada.Strings.Unbounded.To_String(D.Nome));
-         --        Ada.Text_IO.Unbounded_IO.Put_Line(D.Nome);
 
          Put("Digite o nome da disciplina:          ");
          Ada.Text_IO.Get_Line(Nome, Last);
@@ -46,9 +40,9 @@ procedure MainDisciplina is
          New_Line;
          exit when flagAdd /= 1;
       end loop;
-   end MenuCadastrar;
+   end Cadastrar;
 
-   procedure MenuAlterar is
+   procedure Alterar is
       Codigo : Integer;
       D : Disciplina;
    begin
@@ -57,22 +51,16 @@ procedure MainDisciplina is
       Get(Codigo);
       D := Obter(Codigo);
       ImprimirConsole(D);
-   end MenuAlterar;
+   end Alterar;
 
-begin
---     Ada.Text_IO.Put_Line("Menu, escolha uma das opcoes: ");
---     Ada.Text_IO.Put_Line("  [0] Voltar para menu principal");
---     Ada.Text_IO.Put_Line("  [1] Cadastrar");
---     Ada.Text_IO.Put_Line("  [2] Alterar");
---     Ada.Text_IO.Put_Line("  [3] Excluir");
---     Ada.Text_IO.Put_Line("  [4] Listar");
---     Get(opcao);
---     case opcao is
---        when 0 => Main;
---        when 1 => MenuCadastrar;
---        when 2 => MainDisciplina.Alterar;
---        when others => Ada.Text_IO.Put_Line("Opcao invalida");
---     end case;
+   procedure Excluir is
+   begin
+      null;
+   end Excluir;
 
-   null;
-end MainDisciplina;
+   procedure Listar is
+   begin
+      null;
+   end Listar;
+
+end DisciplinaAction;

@@ -1,34 +1,32 @@
 with DisciplinaCrud; use DisciplinaCrud;
-with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Text_IO;
+with GNAT.IO; use GNAT.IO;
 with Ada.Strings.Unbounded;
+with DisciplinaAction;
 
 procedure Main is
-   D, outra, excluido : Disciplina;
-
-   function str(s : String) return Ada.Strings.Unbounded.Unbounded_String is
-   begin
-      return Ada.Strings.Unbounded.To_Unbounded_String(s);
-   end str;
+   opcao : Integer;
 begin
-   D.Codigo := 1234;
-   D.Nome := str("lala");
-   D.CargaHoraria := 6;
-   D.Valor := 150.99;
-   Inserir(D);
-
-   D.Nome := str("Linguagens de Programação");
-   Alterar(D);
-
-   outra := Obter(D.Codigo);
-   ImprimirConsole(outra);
-
-   Excluir(outra.Codigo);
-
-   excluido := Obter(outra.Codigo);
-   Put_Line("Imprimindo o excluido..");
-   ImprimirConsole(excluido);
-
+   Ada.Text_IO.Put_Line("#################################");
+   Ada.Text_IO.Put_Line("### Registro Academico Em Ada ###");
+   Ada.Text_IO.Put_Line("#################################");
+   Ada.Text_IO.Put_Line("Menu, escolha uma das opcoes: ");
+   Ada.Text_IO.Put_Line("  [0] Sair");
+   Ada.Text_IO.Put_Line("  [10] Disciplina - Listar");
+   Ada.Text_IO.Put_Line("  [11] Disciplina - Cadastrar");
+   Ada.Text_IO.Put_Line("  [12] Disciplina - Alterar");
+   Ada.Text_IO.Put_Line("  [13] Disciplina - Excluir");
+   Ada.Text_IO.Put_Line("  [2] Alunos");
+   Ada.Text_IO.Put_Line("  [3] Cursos");
+   Ada.Text_IO.Put_Line("  [4] Matricula");
+   Get(opcao);
+   case opcao is
+      when 0 => null;
+      when 11 => DisciplinaAction.Cadastrar;
+      when 12 => DisciplinaAction.Alterar;
+      when 2..3 => Ada.Text_IO.Put_Line("Nao implementado");
+      when others => Ada.Text_IO.Put_Line("Opcao invalida");
+   end case;
 
 end Main;
 
