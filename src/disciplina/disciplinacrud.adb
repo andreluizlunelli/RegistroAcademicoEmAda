@@ -22,14 +22,19 @@ package body DisciplinaCrud is
       return aArrayDisciplinas;
    end ObterLista;
 
+   function GetIncrementoPosicao return Integer is
+   begin
+      return incrementoPosicao;
+   end GetIncrementoPosicao;
+
    procedure Inserir(D : Disciplina) is
    begin
       Ada.Text_IO.Put_Line("Inserindo a Disciplina..");
+      incrementoPosicao := incrementoPosicao + 1;
       aArrayDisciplinas(incrementoPosicao).Codigo := D.Codigo;
       aArrayDisciplinas(incrementoPosicao).Nome := D.Nome;
       aArrayDisciplinas(incrementoPosicao).CargaHoraria := D.CargaHoraria;
       aArrayDisciplinas(incrementoPosicao).Valor := D.Valor;
-      incrementoPosicao := incrementoPosicao + 1;
    end Inserir;
 
    procedure Alterar(D : Disciplina) is

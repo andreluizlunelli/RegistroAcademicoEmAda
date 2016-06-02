@@ -13,12 +13,13 @@ package DisciplinaCrud is
    -- metodos
    function Obter(Codigo : Integer) return Disciplina;
    function ObterLista return ArrayDisciplinas;
+   function GetIncrementoPosicao return Integer;
    procedure Inserir(D : Disciplina);
    procedure Alterar(D : Disciplina);
    procedure Excluir(Codigo : Integer);
    procedure ImprimirConsole(D : Disciplina);
 
 private
-   incrementoPosicao : Integer := 1;
+   incrementoPosicao : Integer := 0;
    aArrayDisciplinas : ArrayDisciplinas;
 end DisciplinaCrud;
