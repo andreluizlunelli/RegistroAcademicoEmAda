@@ -38,6 +38,7 @@ procedure Main is
    begin
       case opcao is
          when 0 => flagMenu := False;
+         when 10 => DisciplinaAction.Listar;
          when 11 => DisciplinaAction.Cadastrar;
          when 12 => DisciplinaAction.Alterar;
          when others =>

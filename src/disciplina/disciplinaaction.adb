@@ -45,12 +45,36 @@ package body DisciplinaAction is
    procedure Alterar is
       Codigo : Integer;
       D : Disciplina;
+      Nome : String(1..255) := (others => ' ');
+      Last: Integer;
+      confirma: Integer := 0;
    begin
       -- digita o codigo
       Put("Digite o codigo da disciplina que deseja alterar: ");
       Get(Codigo);
       D := Obter(Codigo);
+
+      Put("Alterando..");
       ImprimirConsole(D);
+
+      Put("Digite o novo nome da disciplina: ");
+      Ada.Text_IO.Get_Line(Nome, Last);
+      D.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
+
+      Put("Digite a nova carga horaria da disciplina: ");
+      Get(D.CargaHoraria);
+
+      Put("Digite o novo valor da disciplina, ex:'000.00': ");
+      Ada.Float_Text_IO.Get(D.Valor);
+      New_Line;
+
+      Put("Confirme a alteracao do registro? sim[1]/não[0]: ");
+      Get(confirma);
+      if (confirma = 0) then
+         Put("Alteracao cancelada..");
+      else
+         Alterar(D);
+      end if;
    end Alterar;
 
    procedure Excluir is
@@ -59,8 +83,18 @@ package body DisciplinaAction is
    end Excluir;
 
    procedure Listar is
+      listaDisciplinas : ArrayDisciplinas;
+      incremento : Integer;
    begin
-      null;
+      New_Line;
+      Put("Listando disciplinas..");
+      New_Line;
+      listaDisciplinas := DisciplinaCrud.ObterLista;
+      incremento := DisciplinaCrud.GetIncrementoPosicao;
+      for i in listaDisciplinas'First..incremento loop
+         ImprimirConsole(listaDisciplinas(i));
+      end loop;
+      New_Line;
    end Listar;
 
 end DisciplinaAction;
