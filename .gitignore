@@ -3,4 +3,6 @@ obj/*.ads
 obj/*.ali
 obj/*.o
 obj/*.exe
-obj/*.db*
+obj/gnatinspect.db
+obj/gnatinspect.db-shm
+obj/gnatinspect.db-wal

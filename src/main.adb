@@ -32,6 +32,7 @@ procedure Main is
      Ada.Text_IO.Put_Line("  [11] Disciplina - Cadastrar");
      Ada.Text_IO.Put_Line("  [12] Disciplina - Alterar");
      Ada.Text_IO.Put_Line("  [13] Disciplina - Excluir");
+     Ada.Text_IO.Put_Line("  [21] Aluno - Cadastrar");
    end;
 
    procedure ExecutaEscolhaMenu(opcao : Integer) is
