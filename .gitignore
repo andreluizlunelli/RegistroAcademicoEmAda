@@ -3,3 +3,4 @@ obj/*.ads
 obj/*.ali
 obj/*.o
 obj/*.exe
+obj/*.db*

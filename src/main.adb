@@ -41,6 +41,7 @@ procedure Main is
          when 10 => DisciplinaAction.Listar;
          when 11 => DisciplinaAction.Cadastrar;
          when 12 => DisciplinaAction.Alterar;
+         when 13 => DisciplinaAction.Excluir;
          when others =>
             Ada.Text_IO.Put_Line("");
             Ada.Text_IO.Put_Line("Ops! Essa opcao nao existe.");

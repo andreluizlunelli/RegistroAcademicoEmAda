@@ -78,8 +78,22 @@ package body DisciplinaAction is
    end Alterar;
 
    procedure Excluir is
+      Codigo, opcao : Integer;
+      D : Disciplina;
    begin
-      null;
+      Put("Digite o codigo da disciplina que deseja remover: ");
+      Get(Codigo);
+      D := Obter(Codigo);
+      New_Line;
+      Put("Confirme a remocao do registro? sim[1]/não[0]: ");
+      ImprimirConsole(D);
+      Get(opcao);
+      if (opcao = 0) then
+         Put("Remocao cancelada..");
+      else
+         Excluir(D.Codigo);
+      end if;
+
    end Excluir;
 
    procedure Listar is
@@ -92,7 +106,9 @@ package body DisciplinaAction is
       listaDisciplinas := DisciplinaCrud.ObterLista;
       incremento := DisciplinaCrud.GetIncrementoPosicao;
       for i in listaDisciplinas'First..incremento loop
-         ImprimirConsole(listaDisciplinas(i));
+         if (listaDisciplinas(i).Codigo /= 0) then
+            ImprimirConsole(listaDisciplinas(i));
+         end if;
       end loop;
       New_Line;
    end Listar;
