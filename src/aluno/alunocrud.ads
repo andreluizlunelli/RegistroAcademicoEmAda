@@ -2,24 +2,23 @@
 package AlunoCrud is
    -- tipos
    type Aluno is record
-      ra : Integer := 0;
+      Ra : Integer := 0;
       Nome : Ada.Strings.Unbounded.Unbounded_String;
       Email : Ada.Strings.Unbounded.Unbounded_String;
-      -- CONTINUAR AQUI
-
+      Curso : Integer := 0;
    end record;
---     type ArrayDisciplinas is array (1..100) of Disciplina;
+   type ArrayAluno is array (1..100) of Aluno;
 
    -- metodos
---     function Obter(Codigo : Integer) return Disciplina;
---     function ObterLista return ArrayDisciplinas;
---     function GetIncrementoPosicao return Integer;
---     procedure Inserir(D : Disciplina);
+   function Obter(Ra : Integer) return Aluno;
+   function ObterLista return ArrayAluno;
+   function GetIncrementoPosicao return Integer;
+   procedure Inserir(A : Aluno);
 --     procedure Alterar(D : Disciplina);
 --     procedure Excluir(Codigo : Integer);
---     procedure ImprimirConsole(D : Disciplina);
+   procedure ImprimirConsole(A : Aluno);
 
 private
---     incrementoPosicao : Integer := 0;
---     aArrayDisciplinas : ArrayDisciplinas;
+   incrementoPosicao : Integer := 0;
+   aArrayAluno : ArrayAluno;
 end AlunoCrud;
