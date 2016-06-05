@@ -1,3 +1,4 @@
+with Ada.Strings.Unbounded;
 
 package AlunoCrud is
    -- tipos
@@ -14,8 +15,8 @@ package AlunoCrud is
    function ObterLista return ArrayAluno;
    function GetIncrementoPosicao return Integer;
    procedure Inserir(A : Aluno);
---     procedure Alterar(D : Disciplina);
---     procedure Excluir(Codigo : Integer);
+   procedure Alterar(A : Aluno);
+   procedure Excluir(Ra : Integer);
    procedure ImprimirConsole(A : Aluno);
 
 private

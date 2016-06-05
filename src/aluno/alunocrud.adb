@@ -37,17 +37,43 @@ package body AlunoCrud is
       aArrayAluno(incrementoPosicao).Curso := A.Curso;
    end Inserir;
 
+   procedure Alterar(A : Aluno) is
+   begin
+       Ada.Text_IO.Put_Line("Alterando o Aluno..");
+       for i in aArrayAluno'Range loop
+         if aArrayAluno(i).Ra = A.Ra then
+            aArrayAluno(i).Nome := A.Nome;
+            aArrayAluno(i).Email := A.Email;
+            aArrayAluno(i).Curso := A.Curso;
+            exit;
+         end if;
+      end loop;
+   end Alterar;
+
+   procedure Excluir(Ra : Integer) is
+   begin
+       Ada.Text_IO.Put_Line("Excluindo o Aluno..");
+       for i in aArrayAluno'Range loop
+         if aArrayAluno(i).Ra = Ra then
+            aArrayAluno(i).Ra := 0;
+            aArrayAluno(i).Nome := Ada.Strings.Unbounded.To_Unbounded_String("");
+            aArrayAluno(i).Email := Ada.Strings.Unbounded.To_Unbounded_String("");
+            aArrayAluno(i).Curso := 0;
+            exit;
+         end if;
+      end loop;
+   end Excluir;
+
    procedure ImprimirConsole(A : Aluno) is
    begin
-      -- CONTINUAR AQUI
-      Ada.Text_IO.Put("{Codigo=");
-      Ada.Text_IO.Put(Item => Integer'Image(D.Codigo));
+      Ada.Text_IO.Put("{Ra=");
+      Ada.Text_IO.Put(Item => Integer'Image(A.Ra));
       Ada.Text_IO.Put(", Nome=");
-      Ada.Text_IO.Put(Item => Ada.Strings.Unbounded.To_String(D.Nome));
-      Ada.Text_IO.Put(", Carga_Horaria=");
-      Ada.Text_IO.Put(Item => Integer'Image(D.CargaHoraria));
-      Ada.Text_IO.Put(", Valor=");
-      Ada.Text_IO.Put(Item => Float'Image(D.Valor));
+      Ada.Text_IO.Put(Item => Ada.Strings.Unbounded.To_String(A.Nome));
+      Ada.Text_IO.Put(", E-mail=");
+      Ada.Text_IO.Put(Item => Ada.Strings.Unbounded.To_String(A.Email));
+      Ada.Text_IO.Put(", Cod.Curso=");
+      Ada.Text_IO.Put(Item => Integer'Image(A.Curso));
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
 

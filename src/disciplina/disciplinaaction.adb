@@ -93,7 +93,6 @@ package body DisciplinaAction is
       else
          Excluir(D.Codigo);
       end if;
-
    end Excluir;
 
    procedure Listar is

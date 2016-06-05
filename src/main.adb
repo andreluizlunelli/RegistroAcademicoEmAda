@@ -3,6 +3,7 @@ with Ada.Text_IO;
 with GNAT.IO; use GNAT.IO;
 with Ada.Strings.Unbounded;
 with DisciplinaAction;
+with AlunoAction;
 with Ada.IO_Exceptions;
 with Ada.Integer_Text_IO;
 
@@ -28,11 +29,16 @@ procedure Main is
      Ada.Text_IO.Put_Line("#################################");
      Ada.Text_IO.Put_Line("Menu, escolha uma das opcoes: ");
      Ada.Text_IO.Put_Line("  [00] Sair");
+
      Ada.Text_IO.Put_Line("  [10] Disciplina - Listar");
      Ada.Text_IO.Put_Line("  [11] Disciplina - Cadastrar");
      Ada.Text_IO.Put_Line("  [12] Disciplina - Alterar");
      Ada.Text_IO.Put_Line("  [13] Disciplina - Excluir");
+
+     Ada.Text_IO.Put_Line("  [20] Aluno - Listar");
      Ada.Text_IO.Put_Line("  [21] Aluno - Cadastrar");
+     Ada.Text_IO.Put_Line("  [22] Aluno - Alterar");
+     Ada.Text_IO.Put_Line("  [22] Aluno - Excluir");
    end;
 
    procedure ExecutaEscolhaMenu(opcao : Integer) is
@@ -43,6 +49,10 @@ procedure Main is
          when 11 => DisciplinaAction.Cadastrar;
          when 12 => DisciplinaAction.Alterar;
          when 13 => DisciplinaAction.Excluir;
+         when 20 => AlunoAction.Listar;
+         when 21 => AlunoAction.Cadastrar;
+         when 22 => AlunoAction.Alterar;
+         when 23 => AlunoAction.Excluir;
          when others =>
             Ada.Text_IO.Put_Line("");
             Ada.Text_IO.Put_Line("Ops! Essa opcao nao existe.");
