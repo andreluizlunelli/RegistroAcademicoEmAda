@@ -1,7 +1,6 @@
 with Ada.Text_IO;
 
 package body AlunoCrud is
-
    function Obter(Ra : Integer) return Aluno is
       A : Aluno;
    begin
