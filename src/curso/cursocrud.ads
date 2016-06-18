@@ -2,10 +2,12 @@ with Ada.Strings.Unbounded;
 
 package CursoCrud is
    -- tipos
+   type ArrayDisciplinas is array(1..10) of Integer;
    type Curso is record
       Codigo : Integer := 0;
       Nome : Ada.Strings.Unbounded.Unbounded_String;
       QtdSemestres : Integer := 0;
+      aDisciplinas : ArrayDisciplinas;
    end record;
    type ArrayCurso is array (1..100) of Curso;
 
@@ -21,4 +23,5 @@ package CursoCrud is
 private
    incrementoPosicao : Integer := 0;
    aArrayCurso : ArrayCurso;
+   aDisciplinas: ArrayDisciplinas;
 end CursoCrud;

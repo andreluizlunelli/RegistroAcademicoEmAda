@@ -11,6 +11,7 @@ package body CursoCrud is
             C.Nome := aArrayCurso(i).Nome;
             C.QtdSemestres := aArrayCurso(i).QtdSemestres;
             -- adicionar o hashtable
+            -- mudar é só retornar o C que tem o registro
             exit;
          end if;
       end loop;
@@ -34,7 +35,9 @@ package body CursoCrud is
       aArrayCurso(incrementoPosicao).Codigo := C.Codigo;
       aArrayCurso(incrementoPosicao).Nome := C.Nome;
       aArrayCurso(incrementoPosicao).QtdSemestres := C.QtdSemestres;
-      -- adicionar o hashTable
+      for i in 1..C.QtdSemestres loop
+          aArrayCurso(incrementoPosicao).aDisciplinas(i) := C.aDisciplinas(i);
+      end loop;
    end Inserir;
 
    procedure Alterar(C : Curso) is
@@ -73,7 +76,6 @@ package body CursoCrud is
       Ada.Text_IO.Put(", Qtd_Semestres=");
       Ada.Text_IO.Put(Item => Integer'Image(C.QtdSemestres));
       Ada.Text_IO.Put(", Disciplinas=");
-      -- adicionar a hashTable de disciplinas
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
 
