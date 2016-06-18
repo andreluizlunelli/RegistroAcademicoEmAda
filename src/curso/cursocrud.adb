@@ -52,14 +52,18 @@ package body CursoCrud is
    end Alterar;
 
    procedure Excluir(Codigo : Integer) is
+      QtdSemestres : Integer;
    begin
        Ada.Text_IO.Put_Line("Excluindo o Curso..");
        for i in aArrayCurso'Range loop
          if aArrayCurso(i).Codigo = Codigo then
+            QtdSemestres := aArrayCurso(i).QtdSemestres;
             aArrayCurso(i).Codigo := 0;
             aArrayCurso(i).Nome := Ada.Strings.Unbounded.To_Unbounded_String("");
             aArrayCurso(i).QtdSemestres := 0;
-            -- adicionar hashTable
+            for j in 1..QtdSemestres loop
+               aArrayCurso(i).aDisciplinas(j) := 0;
+            end loop;
             exit;
          end if;
       end loop;

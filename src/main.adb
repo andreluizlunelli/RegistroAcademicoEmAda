@@ -61,8 +61,8 @@ procedure Main is
          when 23 => AlunoAction.Excluir;
          when 30 => CursoAction.Listar;
          when 31 => CursoAction.Cadastrar;
-         when 32 => CursoAction.Cadastrar;
-         when 33 => CursoAction.Cadastrar;
+         when 32 => CursoAction.Alterar;
+         when 33 => CursoAction.Excluir;
          when others =>
             Ada.Text_IO.Put_Line("");
             Ada.Text_IO.Put_Line("Ops! Essa opcao nao existe.");
