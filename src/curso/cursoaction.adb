@@ -13,8 +13,9 @@ package body CursoAction is
       C : Curso;
       Codigo : Integer := 0;
       Nome : String(1..255) := (others => ' ');
-      S: String(1 .. 10) := (others => ' ');
-      Last: Integer;
+      S : String(1 .. 10) := (others => ' ');
+      Last : Integer;
+      aDisciplinas : CursoCrud.ArrayDisciplinas;
    begin
       loop
          Put("Digite o codigo do curso:        ");
@@ -27,6 +28,14 @@ package body CursoAction is
          Put("Digite a quantidade de semestres do curso: ");
          Get(C.QtdSemestres);
          New_Line;
+
+         Put("Digite o codigo das Disciplinas: ");
+         New_Line;
+         for i in 1..C.QtdSemestres loop
+            Put(Integer'Image(i) & " Semestre: ");
+            Get(aDisciplinas(i));
+         end loop;
+         C.aDisciplinas := aDisciplinas;
 
          Inserir(C);
          Put("Voce inseriu um registro..");

@@ -3,6 +3,8 @@ with Ada.Strings.Unbounded;
 package CursoCrud is
    -- tipos
    type ArrayDisciplinas is array(1..10) of Integer;
+   aDisciplinas: ArrayDisciplinas;
+
    type Curso is record
       Codigo : Integer := 0;
       Nome : Ada.Strings.Unbounded.Unbounded_String;
@@ -23,5 +25,4 @@ package CursoCrud is
 private
    incrementoPosicao : Integer := 0;
    aArrayCurso : ArrayCurso;
-   aDisciplinas: ArrayDisciplinas;
 end CursoCrud;

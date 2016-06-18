@@ -1,5 +1,7 @@
 with Ada.Text_IO;
 with Ada.Text_IO.Unbounded_IO;
+with DisciplinaCrud;
+with GNAT.IO;
 
 package body CursoCrud is
    function Obter(Codigo : Integer) return Curso is
@@ -68,6 +70,7 @@ package body CursoCrud is
    end Excluir;
 
    procedure ImprimirConsole(C : Curso) is
+      D : DisciplinaCrud.Disciplina;
    begin
       Ada.Text_IO.Put("{Codigo=");
       Ada.Text_IO.Put(Item => Integer'Image(C.Codigo));
@@ -76,8 +79,15 @@ package body CursoCrud is
       Ada.Text_IO.Put(", Qtd_Semestres=");
       Ada.Text_IO.Put(Item => Integer'Image(C.QtdSemestres));
       Ada.Text_IO.Put(", Disciplinas=");
+      GNAT.IO.New_Line;
+      for i in 1..C.QtdSemestres loop
+         D.Codigo :=  C.aDisciplinas(i);
+         D := DisciplinaCrud.Obter(D.Codigo);
+         DisciplinaCrud.ImprimirConsole(D);
+      end loop;
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
 
+   -- importar função de imprimir disciplina do crud de disciplina
 
 end CursoCrud;
