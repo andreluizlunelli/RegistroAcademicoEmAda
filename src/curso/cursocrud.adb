@@ -9,11 +9,7 @@ package body CursoCrud is
    begin
       for i in aArrayCurso'Range loop
          if aArrayCurso(i).Codigo = Codigo then
-            C.Codigo := aArrayCurso(i).Codigo;
-            C.Nome := aArrayCurso(i).Nome;
-            C.QtdSemestres := aArrayCurso(i).QtdSemestres;
-            -- adicionar o hashtable
-            -- mudar é só retornar o C que tem o registro
+            C := aArrayCurso(i);
             exit;
          end if;
       end loop;
@@ -57,7 +53,7 @@ package body CursoCrud is
 
    procedure Excluir(Codigo : Integer) is
    begin
-       Ada.Text_IO.Put_Line("Excluindo a Curso..");
+       Ada.Text_IO.Put_Line("Excluindo o Curso..");
        for i in aArrayCurso'Range loop
          if aArrayCurso(i).Codigo = Codigo then
             aArrayCurso(i).Codigo := 0;
