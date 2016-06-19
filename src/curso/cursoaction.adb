@@ -70,6 +70,14 @@ package body CursoAction is
       Get(C.QtdSemestres);
       New_Line;
 
+      Put("Digite o novo codigo das Disciplinas: ");
+      New_Line;
+      for i in 1..C.QtdSemestres loop
+         Put(Integer'Image(i) & " Semestre: ");
+         Get(aDisciplinas(i));
+      end loop;
+      C.aDisciplinas := aDisciplinas;
+
       Put("Confirme a alteracao do registro? sim[1]/não[0]: ");
       Get(confirma);
       if (confirma = 0) then
