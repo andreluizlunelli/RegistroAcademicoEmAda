@@ -7,10 +7,7 @@ package body DisciplinaCrud is
    begin
       for i in aArrayDisciplinas'Range loop
          if aArrayDisciplinas(i).Codigo = Codigo then
-            D.Codigo := aArrayDisciplinas(i).Codigo;
-            D.Nome := aArrayDisciplinas(i).Nome;
-            D.CargaHoraria := aArrayDisciplinas(i).CargaHoraria;
-            D.Valor := aArrayDisciplinas(i).Valor;
+            D := aArrayDisciplinas(i);
             exit;
          end if;
       end loop;

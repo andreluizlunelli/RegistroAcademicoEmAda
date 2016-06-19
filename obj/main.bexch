@@ -7,8 +7,10 @@ C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\str.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\alunocrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\alunoaction.o
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\cursoaction.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\disciplinacrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\disciplinaaction.o
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\cursocrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads

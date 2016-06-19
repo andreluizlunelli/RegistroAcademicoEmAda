@@ -1,16 +1,12 @@
 with Ada.Text_IO;
 
 package body AlunoCrud is
-
    function Obter(Ra : Integer) return Aluno is
       A : Aluno;
    begin
       for i in aArrayAluno'Range loop
          if aArrayAluno(i).Ra = Ra then
-            A.Ra := aArrayAluno(i).Ra;
-            A.Nome := aArrayAluno(i).Nome;
-            A.Email := aArrayAluno(i).Email;
-            A.Curso := aArrayAluno(i).Curso;
+            A := aArrayAluno(i);
             exit;
          end if;
       end loop;
