@@ -18,7 +18,7 @@ proceMure MainMatricula is
       Last: Integer;
    begin
       loop
-         Put("Digite o Numero Ma Matricula:        ");
+         Put("Digite o Numero Ma Matricula:     1   ");
          Get(M.Numero);
 
          Put("Digite o Aluno Ma Matricula:          ");

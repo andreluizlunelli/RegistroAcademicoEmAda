@@ -5,6 +5,7 @@ with Ada.Strings.Unbounded;
 with DisciplinaAction;
 with AlunoAction;
 with CursoAction;
+with MatriculaAction;
 with Ada.IO_Exceptions;
 with Ada.Integer_Text_IO;
 
@@ -45,6 +46,11 @@ procedure Main is
      Ada.Text_IO.Put_Line("  [31] Curso - Cadastrar");
      Ada.Text_IO.Put_Line("  [32] Curso - Alterar");
      Ada.Text_IO.Put_Line("  [33] Curso - Excluir");
+     New_Line;
+     Ada.Text_IO.Put_Line("  [40] Curso - Listar");
+     Ada.Text_IO.Put_Line("  [41] Curso - Cadastrar");
+     Ada.Text_IO.Put_Line("  [42] Curso - Alterar");
+     Ada.Text_IO.Put_Line("  [43] Curso - Excluir");
    end;
 
    procedure ExecutaEscolhaMenu(opcao : Integer) is
@@ -63,6 +69,10 @@ procedure Main is
          when 31 => CursoAction.Cadastrar;
          when 32 => CursoAction.Alterar;
          when 33 => CursoAction.Excluir;
+         when 40 => MatriculaAction.Listar;
+         when 41 => MatriculaAction.Cadastrar;
+         when 42 => MatriculaAction.Alterar;
+         when 43 => MatriculaAction.Excluir;
          when others =>
             Ada.Text_IO.Put_Line("");
             Ada.Text_IO.Put_Line("Ops! Essa opcao nao existe.");

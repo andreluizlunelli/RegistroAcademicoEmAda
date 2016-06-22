@@ -1,5 +1,7 @@
 with Ada.Text_IO;
 with Ada.Text_IO.Unbounded_IO;
+with CursoCrud;
+with GNAT.IO;
 
 package body MatriculaCrud is
    function Obter(Numero : Integer) return Matricula is
@@ -7,9 +9,7 @@ package body MatriculaCrud is
    begin
       for i in aArrayMatriculas'Range loop
          if aArrayMatriculas(i).Numero = Numero then
-            M.Numero := aArrayMatriculas(i).Numero;
-            M.Aluno := aArrayMatriculas(i).Aluno;
-            M.Periodo := aArrayMatriculas(i).Periodo;
+            M := aArrayMatriculas(i);
             exit;
          end if;
       end loop;
@@ -33,6 +33,9 @@ package body MatriculaCrud is
       aArrayMatriculas(incrementoPosicao).Numero := M.Numero;
       aArrayMatriculas(incrementoPosicao).Aluno := M.Aluno;
       aArrayMatriculas(incrementoPosicao).Periodo := M.Periodo;
+      for i in aArrayMatriculas'Range loop
+          aArrayMatriculas(incrementoPosicao).aCursos(i) := M.aCursos(i);
+      end loop;
    end Inserir;
 
    procedure Alterar(M : Matricula) is
@@ -49,25 +52,37 @@ package body MatriculaCrud is
 
    procedure Excluir(Numero : Integer) is
    begin
-       Ada.Text_IO.Put_Line("Excluindo a Disciplina..");
+
+       Ada.Text_IO.Put_Line("Excluindo a Matricula..");
        for i in aArrayMatriculas'Range loop
          if aArrayMatriculas(i).Numero = Numero then
             aArrayMatriculas(i).Numero := 0;
-            aArrayMatriculas(i).Aluno := Ada.Strings.Unbounded.To_Unbounded_String("");
+            aArrayMatriculas(i).Aluno := 0;
             aArrayMatriculas(i).Periodo := 0.0;
+            for i in aArrayMatriculas'Range loop
+            aArrayMatriculas(incrementoPosicao).aCursos(i) := 0;
+            end loop;
             exit;
          end if;
       end loop;
    end Excluir;
 
    procedure ImprimirConsole(M : Matricula) is
+      C: CursoCrud.Curso;
    begin
+
       Ada.Text_IO.Put("{Numero=");
       Ada.Text_IO.Put(Item => Integer'Image(M.Numero));
       Ada.Text_IO.Put(", Aluno=");
-      Ada.Text_IO.Put(Item => Ada.Strings.Unbounded.To_String(M.Aluno));
+      Ada.Text_IO.Put(Item => Integer'Image(M.Aluno));
       Ada.Text_IO.Put(", Periodo=");
       Ada.Text_IO.Put(Item => Float'Image(M.Periodo));
+      GNAT.IO.New_Line;
+      for i in aArrayMatriculas'Range loop
+         C.Codigo := M.aCursos(i);
+         C := CursoCrud.Obter(C.Codigo);
+         CursoCrud.ImprimirConsole(C);
+      end loop;
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
 

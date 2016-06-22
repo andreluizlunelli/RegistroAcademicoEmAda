@@ -12,21 +12,27 @@ package body MatriculaAction is
       flagAdd : Integer := 1;
       M : Matricula;
       Numero : Integer := 0;
-      Aluno : String(1..255) := (others => ' ');
+      Aluno : Integer := 0;
       S: String(1 .. 10) := (others => ' ');
-      Last: Integer;
+      aCursos: MatriculaCrud.ArrayCurso;
    begin
       loop
          Put("Digite o numero da matricula:        ");
          Get(M.Numero);
 
          Put("Digite o aluno da matricula:          ");
-         Ada.Text_IO.Get_Line(Aluno, Last);
-         M.Aluno := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
+         Get(M.Aluno);
 
          Put("Digite o periodo da matricula, ex:'0000.0': ");
          Ada.Float_Text_IO.Get(M.Periodo);
          New_Line;
+
+          Put("Digite o codigo das Disciplinas: ");
+         New_Line;
+         for i in ArrayCurso'Range loop
+            Get(aCursos(i));
+         end loop;
+         M.aCursos := aCursos;
 
          Inserir(M);
          Put("Voce inseriu um registro..");
@@ -42,8 +48,7 @@ package body MatriculaAction is
    procedure Alterar is
       Numero : Integer;
       M : Matricula;
-      Aluno : String(1..255) := (others => ' ');
-      Last: Integer;
+      Aluno : Integer := 0;
       confirma: Integer := 0;
    begin
       -- digita o codigo
@@ -54,9 +59,8 @@ package body MatriculaAction is
       Put("Alterando..");
       ImprimirConsole(M);
 
-      Put("Digite o novo nome do aluno: ");
-      Ada.Text_IO.Get_Line(Aluno, Last);
-      M.Aluno := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
+      Put("Digite o codigo do aluno: ");
+      Get(Aluno);
 
       Put("Digite o novo valor de matricula, ex:'0000.0': ");
       Ada.Float_Text_IO.Get(M.Periodo);
