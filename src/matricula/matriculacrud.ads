@@ -22,6 +22,7 @@ package MatriculaCrud is
    procedure Alterar(M : Matricula);
    procedure Excluir(Numero : Integer);
    procedure ImprimirConsole(M : Matricula);
+   function ObterValorTotalMatricula(M:Matricula) return Float;
 
 private
    incrementoPosicao : Integer := 0;

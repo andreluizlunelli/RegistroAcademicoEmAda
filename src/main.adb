@@ -47,10 +47,10 @@ procedure Main is
      Ada.Text_IO.Put_Line("  [32] Curso - Alterar");
      Ada.Text_IO.Put_Line("  [33] Curso - Excluir");
      New_Line;
-     Ada.Text_IO.Put_Line("  [40] Curso - Listar");
-     Ada.Text_IO.Put_Line("  [41] Curso - Cadastrar");
-     Ada.Text_IO.Put_Line("  [42] Curso - Alterar");
-     Ada.Text_IO.Put_Line("  [43] Curso - Excluir");
+     Ada.Text_IO.Put_Line("  [40] Matricula - Listar");
+     Ada.Text_IO.Put_Line("  [41] Matricula - Cadastrar");
+     Ada.Text_IO.Put_Line("  [42] Matricula - Alterar");
+     Ada.Text_IO.Put_Line("  [43] Matricula - Excluir");
    end;
 
    procedure ExecutaEscolhaMenu(opcao : Integer) is

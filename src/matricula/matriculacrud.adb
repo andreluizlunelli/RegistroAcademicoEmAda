@@ -1,6 +1,7 @@
 with Ada.Text_IO;
 with Ada.Text_IO.Unbounded_IO;
 with CursoCrud;
+with DisciplinaCrud;
 with GNAT.IO;
 
 package body MatriculaCrud is
@@ -77,6 +78,8 @@ package body MatriculaCrud is
       Ada.Text_IO.Put(Item => Integer'Image(M.Numero));
       Ada.Text_IO.Put(", Aluno=");
       Ada.Text_IO.Put(Item => Integer'Image(M.Aluno));
+      Ada.Text_IO.Put(", Valor Total=");
+      Ada.Text_IO.Put(Item => Float'Image(ObterValorTotalMatricula(M)));
       Ada.Text_IO.Put(", Periodo=");
       Ada.Text_IO.Put(Item => Float'Image(M.Periodo));
       GNAT.IO.New_Line;
@@ -87,5 +90,20 @@ package body MatriculaCrud is
       end loop;
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
+
+   function ObterValorTotalMatricula(M:Matricula) return Float is
+      C:CursoCrud.Curso;
+      D:DisciplinaCrud.Disciplina;
+      ValorTotal:Float := 0.0;
+   begin
+      for i in 1..M.QtdCurso loop
+         C := CursoCrud.Obter(M.aCursos(i));
+         for j in 1..C.QtdSemestres loop
+            D := DisciplinaCrud.Obter(C.aDisciplinas(j));
+            ValorTotal := ValorTotal + D.Valor;
+         end loop;
+      end loop;
+      return ValorTotal;
+   end ObterValorTotalMatricula;
 
 end MatriculaCrud;
