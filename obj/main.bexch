@@ -4,6 +4,7 @@ b__main.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr
 20160531231142
 [BOUND OBJECT FILES]
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\imprimirFloat.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\str.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\alunocrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\alunoaction.o
@@ -12,6 +13,8 @@ C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\disciplinacrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\disciplinaaction.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\cursocrud.o
 C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\main.o
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\matriculacrud.o
+C:\Users\tolun\ada\RegistroAcademicoEmAda\obj\matriculaaction.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
