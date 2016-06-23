@@ -18,21 +18,21 @@ package body MatriculaAction is
       QtdCurso : Integer := 0;
    begin
       loop
-         Put("Digite o numero da matricula:        ");
+         Put("Digite o numero da matricula(valor inteiro):        ");
          Get(M.Numero);
 
-         Put("Digite o aluno da matricula:          ");
+         Put("Digite o codigo aluno da matricula(valor inteiro):          ");
          Get(M.Aluno);
 
-         Put("Digite o periodo da matricula, ex:'0000.0': ");
+         Put("Digite o periodo da matricula, ex:'0000.0'(valor real): ");
          Ada.Float_Text_IO.Get(M.Periodo);
          New_Line;
 
-          Put("Digite a quantidade de cursos: ");
+          Put("Digite a quantidade de cursos(valor inteiro): ");
          Get(M.QtdCurso);
          New_Line;
 
-          Put("Digite o codigo dos cursos: ");
+          Put("Digite o codigo dos cursos(valor inteiro): ");
          New_Line;
          for i in 1..M.QtdCurso loop
             Put(Integer'Image(i) & " Curso : ");
@@ -58,7 +58,7 @@ package body MatriculaAction is
       confirma: Integer := 0;
    begin
       -- digita o codigo
-      Put("Digite o codigo da disciplina que deseja alterar: ");
+      Put("Digite o codigo da disciplina que deseja alterar(valor inteiro): ");
       Get(Numero);
       M := Obter(Numero);
       New_Line;
@@ -67,10 +67,10 @@ package body MatriculaAction is
       ImprimirConsole(M);
       New_Line;
 
-      Put("Digite o codigo do aluno: ");
+      Put("Digite o codigo do aluno(valor inteiro): ");
       Get(M.Aluno);
 
-      Put("Digite o novo valor de matricula, ex:'0000.0': ");
+      Put("Digite o novo valor de matricula(valor real), ex:'0000.0': ");
       Ada.Float_Text_IO.Get(M.Periodo);
       New_Line;
 
@@ -87,7 +87,7 @@ package body MatriculaAction is
       Numero, opcao : Integer;
       M : Matricula;
    begin
-      Put("Digite o numero de matricula que deseja remover: ");
+      Put("Digite o numero de matricula que deseja remover(valor inteiro): ");
       Get(numero);
       M := Obter(Numero);
       New_Line;

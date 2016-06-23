@@ -19,10 +19,10 @@ package body AlunoAction is
       Last: Integer;
    begin
       loop
-         Put("Digite o RA do aluno: ");
+         Put("Digite o RA do aluno(valor inteiro): ");
          Get(A.Ra);
 
-         Put("Digite o nome do aluno: ");
+         Put("Digite o nome do aluno(valor inteiro): ");
          Ada.Text_IO.Get_Line(Nome, Last);
          A.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
@@ -30,7 +30,7 @@ package body AlunoAction is
          Ada.Text_IO.Get_Line(Email, Last);
          A.Email := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-         Put("Digite o codigo do curso que ele vai cursar: ");
+         Put("Digite o codigo do curso que ele vai cursar(valor inteiro): ");
          Get(A.Curso);
          New_Line;
 
@@ -54,7 +54,7 @@ package body AlunoAction is
       confirma: Integer := 0;
    begin
       -- digita o codigo
-      Put("Digite o numero do Ra de aluno que deseja alterar: ");
+      Put("Digite o numero do Ra de aluno que deseja alterar(valor inteiro): ");
       Get(Ra);
       A := AlunoCrud.Obter(Ra);
 
@@ -69,7 +69,7 @@ package body AlunoAction is
       Ada.Text_IO.Get_Line(Email, Last);
       A.Email := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-      Put("Digite o novo curso do aluno: ");
+      Put("Digite o novo curso do aluno(valor inteiro): ");
       Get(A.Curso);
       New_Line;
 
@@ -86,7 +86,7 @@ package body AlunoAction is
       Ra, opcao : Integer;
       A : Aluno;
    begin
-      Put("Digite o Ra do aluno que deseja remover: ");
+      Put("Digite o Ra do aluno que deseja remover(valor inteiro): ");
       Get(Ra);
       A := Obter(Ra);
       New_Line;

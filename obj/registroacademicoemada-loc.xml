@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 43">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 82">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\disciplina\disciplinaaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 16">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 55">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 64">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 51">
+      <vfs_project  />
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 7">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\disciplina\str.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 4">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\disciplina\disciplinacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 5">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\imprimirFloat.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 2">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\imprimirFloat.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 5">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\imprimirFloat.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 67">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\disciplina\disciplinacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 17">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 20">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\matricula\matriculacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 55" line=" 82">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\matricula\matriculacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 84">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\matricula\matriculacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 86">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\matricula\matriculacrud.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 11" line=" 3">
+      <vfs_project >C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file >C:\Users\tolun\ada\RegistroAcademicoEmAda\src\imprimirFloat.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 43" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 82" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\disciplina\disciplinaaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 16" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 55" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 64" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 4" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 51" >
+      <vfs_project />
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 11" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\curso\cursoaction.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 65" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunocrud.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\tolun\ada\RegistroAcademicoEmAda\registroacademicoemada.gpr</vfs_project>
+      <vfs_file>C:\Users\tolun\ada\RegistroAcademicoEmAda\src\aluno\alunoaction.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

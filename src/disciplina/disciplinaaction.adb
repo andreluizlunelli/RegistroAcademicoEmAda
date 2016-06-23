@@ -17,14 +17,14 @@ package body DisciplinaAction is
       Last: Integer;
    begin
       loop
-         Put("Digite o codigo da disciplina:        ");
+         Put("Digite o codigo da disciplina(valor inteiro):        ");
          Get(D.Codigo);
 
          Put("Digite o nome da disciplina:          ");
          Ada.Text_IO.Get_Line(Nome, Last);
          D.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-         Put("Digite a carga horaria da disciplina: ");
+         Put("Digite a carga horaria da disciplina(valor inteiro): ");
          Get(D.CargaHoraria);
 
          Put("Digite o valor da disciplina, ex:'000.00': ");
@@ -50,7 +50,7 @@ package body DisciplinaAction is
       confirma: Integer := 0;
    begin
       -- digita o codigo
-      Put("Digite o codigo da disciplina que deseja alterar: ");
+      Put("Digite o codigo da disciplina que deseja alterar(valor inteiro): ");
       Get(Codigo);
       D := Obter(Codigo);
 
@@ -61,10 +61,10 @@ package body DisciplinaAction is
       Ada.Text_IO.Get_Line(Nome, Last);
       D.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-      Put("Digite a nova carga horaria da disciplina: ");
+      Put("Digite a nova carga horaria da disciplina(valor inteiro): ");
       Get(D.CargaHoraria);
 
-      Put("Digite o novo valor da disciplina, ex:'000.00': ");
+      Put("Digite o novo valor da disciplina, ex:'000.00'(valor real): ");
       Ada.Float_Text_IO.Get(D.Valor);
       New_Line;
 
@@ -81,7 +81,7 @@ package body DisciplinaAction is
       Codigo, opcao : Integer;
       D : Disciplina;
    begin
-      Put("Digite o codigo da disciplina que deseja remover: ");
+      Put("Digite o codigo da disciplina que deseja remover(valor inteiro): ");
       Get(Codigo);
       D := Obter(Codigo);
       New_Line;

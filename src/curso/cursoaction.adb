@@ -18,18 +18,18 @@ package body CursoAction is
       aDisciplinas : CursoCrud.ArrayDisciplinas;
    begin
       loop
-         Put("Digite o codigo do curso:        ");
+         Put("Digite o codigo do curso(valor inteiro):        ");
          Get(C.Codigo);
 
          Put("Digite o nome do curso:          ");
          Ada.Text_IO.Get_Line(Nome, Last);
          C.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-         Put("Digite a quantidade de semestres do curso: ");
+         Put("Digite a quantidade de semestres do curso(valor inteiro): ");
          Get(C.QtdSemestres);
          New_Line;
 
-         Put("Digite o codigo das Disciplinas: ");
+         Put("Digite o codigo das Disciplinas(valor inteiro): ");
          New_Line;
          for i in 1..C.QtdSemestres loop
             Put(Integer'Image(i) & " Semestre: ");
@@ -55,7 +55,7 @@ package body CursoAction is
       Last: Integer;
       confirma: Integer := 0;
    begin
-      Put("Digite o codigo do curso que deseja alterar: ");
+      Put("Digite o codigo do curso que deseja alterar(valor inteiro): ");
       Get(Codigo);
       C := Obter(Codigo);
 
@@ -66,11 +66,11 @@ package body CursoAction is
       Ada.Text_IO.Get_Line(Nome, Last);
       C.Nome := Ada.Strings.Unbounded.To_Unbounded_String(Ada.Text_IO.Get_Line);
 
-      Put("Digite a nova quantidade de semestres do curso: ");
+      Put("Digite a nova quantidade de semestres do curso(valor inteiro): ");
       Get(C.QtdSemestres);
       New_Line;
 
-      Put("Digite o novo codigo das Disciplinas: ");
+      Put("Digite o novo codigo das Disciplinas(valor inteiro): ");
       New_Line;
       for i in 1..C.QtdSemestres loop
          Put(Integer'Image(i) & " Semestre: ");
@@ -91,7 +91,7 @@ package body CursoAction is
       Codigo, opcao : Integer;
       C : Curso;
    begin
-      Put("Digite o codigo do curso que deseja remover: ");
+      Put("Digite o codigo do curso que deseja remover(valor inteiro): ");
       Get(Codigo);
       C := Obter(Codigo);
       New_Line;
