@@ -33,7 +33,7 @@ package body MatriculaCrud is
       aArrayMatriculas(incrementoPosicao).Numero := M.Numero;
       aArrayMatriculas(incrementoPosicao).Aluno := M.Aluno;
       aArrayMatriculas(incrementoPosicao).Periodo := M.Periodo;
-      for i in aArrayMatriculas'Range loop
+      for i in 1..M.QtdCurso loop
           aArrayMatriculas(incrementoPosicao).aCursos(i) := M.aCursos(i);
       end loop;
    end Inserir;
@@ -51,15 +51,17 @@ package body MatriculaCrud is
    end Alterar;
 
    procedure Excluir(Numero : Integer) is
+      qtdCurso : Integer;
    begin
 
        Ada.Text_IO.Put_Line("Excluindo a Matricula..");
        for i in aArrayMatriculas'Range loop
          if aArrayMatriculas(i).Numero = Numero then
+            qtdCurso := aArrayMatriculas(i).QtdCurso;
             aArrayMatriculas(i).Numero := 0;
             aArrayMatriculas(i).Aluno := 0;
             aArrayMatriculas(i).Periodo := 0.0;
-            for i in aArrayMatriculas'Range loop
+            for i in 1..qtdCurso loop
             aArrayMatriculas(incrementoPosicao).aCursos(i) := 0;
             end loop;
             exit;
@@ -78,7 +80,7 @@ package body MatriculaCrud is
       Ada.Text_IO.Put(", Periodo=");
       Ada.Text_IO.Put(Item => Float'Image(M.Periodo));
       GNAT.IO.New_Line;
-      for i in aArrayMatriculas'Range loop
+      for i in 1..M.QtdCurso loop
          C.Codigo := M.aCursos(i);
          C := CursoCrud.Obter(C.Codigo);
          CursoCrud.ImprimirConsole(C);

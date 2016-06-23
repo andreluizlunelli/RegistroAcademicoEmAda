@@ -14,7 +14,8 @@ package body MatriculaAction is
       Numero : Integer := 0;
       Aluno : Integer := 0;
       S: String(1 .. 10) := (others => ' ');
-      aCursos: MatriculaCrud.ArrayCurso;
+      aCursos: MatriculaCrud.ArrayCursos;
+      QtdCurso : Integer := 0;
    begin
       loop
          Put("Digite o numero da matricula:        ");
@@ -27,9 +28,14 @@ package body MatriculaAction is
          Ada.Float_Text_IO.Get(M.Periodo);
          New_Line;
 
-          Put("Digite o codigo das Disciplinas: ");
+          Put("Digite a quantidade de cursos: ");
+         Get(M.QtdCurso);
          New_Line;
-         for i in ArrayCurso'Range loop
+
+          Put("Digite o codigo dos cursos: ");
+         New_Line;
+         for i in 1..M.QtdCurso loop
+            Put(Integer'Image(i) & " Curso : ");
             Get(aCursos(i));
          end loop;
          M.aCursos := aCursos;
@@ -55,12 +61,14 @@ package body MatriculaAction is
       Put("Digite o codigo da disciplina que deseja alterar: ");
       Get(Numero);
       M := Obter(Numero);
+      New_Line;
 
       Put("Alterando..");
       ImprimirConsole(M);
+      New_Line;
 
       Put("Digite o codigo do aluno: ");
-      Get(Aluno);
+      Get(M.Aluno);
 
       Put("Digite o novo valor de matricula, ex:'0000.0': ");
       Ada.Float_Text_IO.Get(M.Periodo);

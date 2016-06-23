@@ -2,14 +2,15 @@ with Ada.Strings.Unbounded;
 
 package MatriculaCrud is
    -- tipos
-   type ArrayCurso is array(1..10) of Integer;
-   aCursos: ArrayCurso;
+   type ArrayCursos is array(1..10) of Integer;
+   aCursos: ArrayCursos;
 
    type Matricula is record
       Numero : Integer := 0;
       Aluno : Integer := 0;
       Periodo : Float := 0.0;
-      aCursos: ArrayCurso;
+      aCursos: ArrayCursos;
+      QtdCurso: Integer :=0;
    end record;
    type ArrayMatriculas is array (1..100) of Matricula;
 
