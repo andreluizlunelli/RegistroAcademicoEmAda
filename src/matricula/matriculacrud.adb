@@ -3,6 +3,8 @@ with Ada.Text_IO.Unbounded_IO;
 with CursoCrud;
 with DisciplinaCrud;
 with GNAT.IO;
+with imprimirFloat;
+with Ada.Float_Text_IO;
 
 package body MatriculaCrud is
    function Obter(Numero : Integer) return Matricula is
@@ -79,9 +81,9 @@ package body MatriculaCrud is
       Ada.Text_IO.Put(", Aluno=");
       Ada.Text_IO.Put(Item => Integer'Image(M.Aluno));
       Ada.Text_IO.Put(", Valor Total=");
-      Ada.Text_IO.Put(Item => Float'Image(ObterValorTotalMatricula(M)));
+      imprimirFloat(ObterValorTotalMatricula(M));
       Ada.Text_IO.Put(", Periodo=");
-      Ada.Text_IO.Put(Item => Float'Image(M.Periodo));
+      Ada.Float_Text_IO.Put(Item => M.Periodo,Fore => 3,Aft => 1,Exp => 0);
       GNAT.IO.New_Line;
       for i in 1..M.QtdCurso loop
          C.Codigo := M.aCursos(i);

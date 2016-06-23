@@ -1,5 +1,7 @@
 with Ada.Text_IO;
 with Ada.Text_IO.Unbounded_IO;
+with Ada.Float_Text_IO;
+with imprimirFloat;
 
 package body DisciplinaCrud is
    function Obter(Codigo : Integer) return Disciplina is
@@ -70,7 +72,7 @@ package body DisciplinaCrud is
       Ada.Text_IO.Put(", Carga_Horaria=");
       Ada.Text_IO.Put(Item => Integer'Image(D.CargaHoraria));
       Ada.Text_IO.Put(", Valor=");
-      Ada.Text_IO.Put(Item => Float'Image(D.Valor));
+      imprimirFloat(D.Valor);
       Ada.Text_IO.Put_Line("}");
    end ImprimirConsole;
 
